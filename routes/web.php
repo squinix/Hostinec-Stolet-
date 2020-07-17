@@ -17,23 +17,27 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome')->with('headerClass', 'homePageImage');
+    return view('welcome')->with('headerClass', 'denniMenu');
 })->name('hlavni-strana');
 
 Route::get('/jidelni-listek', function () {
-    return view('jidelni-listek')->with('headerClass', 'homePageImage');
+    return view('jidelni-listek')->with('headerClass', 'jidelniListek');
 })->name('jidelni-listek');
 
+Route::get('/galerie', function () {
+    return view('galerie')->with('headerClass', 'galerie');
+})->name('galerie');
+
 Route::get('/o-nas', function () {
-    return view('o-nas')->with('headerClass', 'homePageImage');
+    return view('o-nas')->with('headerClass', 'o_nas');
 })->name('o-nas');
 
 Route::get('/kontakt', function () {
-    return view('kontakt')->with('headerClass', 'homePageImage');
+    return view('kontakt')->with('headerClass');
 })->name('kontakt');
 
 Auth::routes(['register' => false]);
 
-Route::post('/home', 'HomeController@store')->name('home.store');
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::post('/home', 'HomeController@store')->name('home.store');
+Route::delete('/home', 'HomeController@destroy')->name('home.destroy');

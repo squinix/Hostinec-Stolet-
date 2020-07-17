@@ -146,7 +146,7 @@
                     </li>
                     <li>
                         <small class="text-base font-thin">
-                            10:30 - 1:00, kuchyň do ...
+                            10:30 - 1:00, kuchyň do 22:00
                         </small>
                     </li>
                     <li class="mt-4">
@@ -156,7 +156,7 @@
                     </li>
                     <li>
                         <small class="text-base font-thin">
-                            11:30 - 1:00, kuchyň do ...
+                            11:30 - 1:00, kuchyň do 22:00
                         </small>
                     </li>
                     <li class="mt-4">

@@ -38,4 +38,9 @@ class HomeController extends Controller
 
         return redirect('home');
     }
+
+    public function destroy()
+    {
+        dd('asd');
+    }
 }

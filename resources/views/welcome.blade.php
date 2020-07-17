@@ -14,13 +14,12 @@
     <h1 class="texl-3xl sm:text-4xl font-thin uppercase text-center pt-16 sm:pt-32 pb-2">
         Nevybrali ste si z denního menu? Zkuste naše minutky 
     </h1>
-    <div class="block sm:flex">
-        <div class="sm:flex-1 sm:w-1/2 m-auto">
-            <img src="/storage/uploads/menu_1.jpg" alt="Hostinec Stoletá stálé menu" class="m-auto">
-        </div>
-        <div class="sm:flex-1 sm:w-1/2 m-auto">
-            <img src="/storage/uploads/menu_2.jpg" alt="Hostinec Stoletá stálé menu" class="m-auto">
-        </div>
+    <div class="text-center">
+        <button type="button" class="bg-brown hover:shadow-xl text-white font-thin py-2 sm:py-4 px-4 sm:px-6 text-xs sm:text-base mt-8 mb-16 uppercase">
+            <a href="{{ route('jidelni-listek') }}">
+                Přejít na jídelní lístek
+            </a>
+        </button>    
     </div>
 </div>
 @endsection

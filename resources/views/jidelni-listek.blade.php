@@ -16,7 +16,7 @@
         </div>
     </div>
     <h1 class="texl-3xl sm:text-4xl font-thin uppercase text-center pt-16 sm:pt-32 pb-2">
-        Podáváme také hotovky, podívejte se na naše denní menu.
+        Podívejte se na naše denní menu.
     </h1>
     <div class="text-center">
         <button type="button" class="bg-brown hover:shadow-xl text-white font-thin py-2 sm:py-4 px-4 sm:px-6 text-xs sm:text-base mt-8 mb-16 uppercase">

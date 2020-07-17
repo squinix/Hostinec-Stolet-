@@ -33,9 +33,33 @@
             background-attachment: fixed;
         }
 
-        .homePageImage {
-            background: url("/storage/uploads/DSC_2144.jpg");
+        .denniMenu {
+            background: url("/storage/uploads/IMG_6604.jpg");
             background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .jidelniListek {
+            background: url("/storage/uploads/IMG_6654 (1).jpg");
+            background-position: 50% 35%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .galerie {
+            background: url("/storage/uploads/DSC_2443.jpg");
+            background-position: 50% 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .o_nas {
+            background: url("/storage/uploads/DSC_2151.jpg");
+            background-position: 50% 60%;
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -72,14 +96,9 @@
 
         <div class="w-full {{ $headerClass ?? 'default' }}">
             <div class="bg-black bg-opacity-75 h-screen sm:h-128 mx-auto flex justify-center items-center">
-                <h1 class="sticky top-0 text-white text-shadow-lg tracking-wider text-4xl sm:text-6xl font-black uppercase text-center py-16">
-                    <div class="inline-block animate__animated animate__slideInLeft">
-                        Hostinec 
-                    </div>
-                    <div class="inline-block animate__animated animate__slideInRight">
-                        stoletá
-                    </div>
-                </h1>    
+                <div class="sticky top-0">
+                    <img src="/storage/uploads/stoleta_logo_white.png" alt="hostinec-stoleta-logo" width="250px">
+                </div>
             </div>
         </div>
 
@@ -95,12 +114,17 @@
                         <ul>
                             <li class="inline-block align-middle px-4 mx-4 py-2 {{ (request()->is('/')) ? 'active' : '' }}">
                                 <a href="{{ route('hlavni-strana') }}" class="font-bold text-sm uppercase">
-                                    Hlavní strana
+                                    Denní menu
                                 </a>
                             </li>
                             <li class="inline-block align-middle px-4 mx-4 py-2 {{ (request()->is('jidelni-listek')) ? 'active' : '' }}">
                                 <a href="{{ route('jidelni-listek') }}" class="font-bold text-sm uppercase">
                                     Jídelní lístek
+                                </a>
+                            </li>
+                            <li class="inline-block align-middle px-4 mx-4 py-2 {{ (request()->is('galerie')) ? 'active' : '' }}">
+                                <a href="{{ route('galerie') }}" class="font-bold text-sm uppercase">
+                                    Galerie
                                 </a>
                             </li>
                             <li class="inline-block align-middle px-4 mx-4 py-2 {{ (request()->is('o-nas')) ? 'active' : '' }}">
