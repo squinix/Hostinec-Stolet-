@@ -35,7 +35,7 @@
 
         .denniMenu {
             background: url("/storage/uploads/IMG_6604.jpg");
-            background-position: center;
+            background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
             background-attachment: fixed;
@@ -69,6 +69,12 @@
             border: solid rgb(0,0,0,0.1) 1px;
         }
 
+        @media screen and (max-width: 992px) {
+            .scrollBg {
+                background-attachment: scroll;
+            }
+        }
+
         .progress-container {
             width: 100%;
             height: 2px;
@@ -94,7 +100,7 @@
 <body>
     <div id="app">
 
-        <div class="w-full {{ $headerClass ?? 'default' }}">
+        <div class="w-full scrollBg {{ $headerClass ?? 'default' }}">
             <div class="bg-black bg-opacity-75 h-screen sm:h-128 mx-auto flex justify-center items-center">
                 <div class="sticky top-0">
                     <img src="/storage/uploads/stoleta_logo_white.png" alt="hostinec-stoleta-logo" width="250px">

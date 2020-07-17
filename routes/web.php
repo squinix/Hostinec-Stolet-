@@ -40,4 +40,3 @@ Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@store')->name('home.store');
-Route::delete('/home', 'HomeController@destroy')->name('home.destroy');

@@ -10,7 +10,7 @@
     <p class="text-center text-base font-thin text-gray-600 pb-6">
         {{ __('messages.' . now()->format('l')) }} {{ now()->format('d.m.') }}
     </p>
-    <img src="/storage/uploads/denni_menu.jpg" alt="Hostinec stoletá denní menu {{ now()->format('d.m.Y') }}" class="m-auto">
+    <img src="/storage/uploads/denni_menu.jpg?{{ now() }}" alt="Hostinec stoletá denní menu {{ now()->format('d.m.Y') }}" class="m-auto">
     <h1 class="texl-3xl sm:text-4xl font-thin uppercase text-center pt-16 sm:pt-32 pb-2">
         Nevybrali ste si z denního menu? Zkuste naše minutky 
     </h1>

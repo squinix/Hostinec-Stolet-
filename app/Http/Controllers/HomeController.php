@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
@@ -29,18 +29,23 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-        request()->validate([
+        
+        $request->validate([
+            'denni_menu' => 'required|file|image|max:5000'
+        ]);
+        $imageName = 'denni_menu.jpg';
+        $request->denni_menu->move(public_path('storage/uploads'), $imageName);
+
+        return redirect('home');
+
+
+/*         request()->validate([
             'denni_menu' => 'required|file|image|max:5000'
         ]);
         $request->file('denni_menu')->storeAs(
-            'public/uploads', 'denni_menu.jpg'
+            public_path('storage/uploads'), 'denni_menu.jpg'
         );
 
-        return redirect('home');
-    }
-
-    public function destroy()
-    {
-        dd('asd');
+        return redirect('home'); */
     }
 }
